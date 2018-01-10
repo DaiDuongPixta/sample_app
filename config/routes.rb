@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'test1/new'
+
   default_url_options :host => "localhost:3000"
   get 'sessions/new'
 
@@ -23,5 +25,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   resources :users
+  resources :test1
   resources :account_activations, only: [:edit]
+  resources :microposts, only: [:create, :destroy]
+  
 end
