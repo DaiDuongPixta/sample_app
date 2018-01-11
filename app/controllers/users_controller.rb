@@ -30,6 +30,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @micropost = Micropost.new
     @user = User.find(params[:id])
   end
 
